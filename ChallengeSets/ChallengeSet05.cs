@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace ChallengeSets
 {
@@ -53,7 +54,7 @@ namespace ChallengeSets
             return true;
 
 
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
@@ -67,16 +68,28 @@ namespace ChallengeSets
                 }
             }
             return sum;
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+            string sentence = "";
+            foreach(string word in words)
+            {
+                sentence += word + " ";
+            }
+            Console.WriteLine(sentence) ;
+            return sentence;
+            //throw new NotImplementedException();
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
+
+            foreach(double element in elements)
+            {
+
+            }
             throw new NotImplementedException();
         }
 
