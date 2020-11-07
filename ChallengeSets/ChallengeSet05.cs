@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengeSets
 {
@@ -7,21 +8,65 @@ namespace ChallengeSets
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
+
+            List<int>[] arr = ;
+            
+            for (int i = startNumber; i < 100; i++)
+            {
+                if (i % n == 0)
+                {
+                    arr.Add();//this is not working for some reason
+                }
+            }
             throw new NotImplementedException();
+
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
         {
-            throw new NotImplementedException();
+            //var business = new Business();
+            foreach(Business bus in businesses)
+            {
+                if (bus.TotalRevenue < 0)
+                {
+                    //change name
+                    bus.Name = "closed";
+                }
+            }
+            //throw new NotImplementedException();
         }
 
         public bool IsAscendingOrder(int[] numbers)
         {
+
+            IEnumerable<int> sortAscending =
+                from num in numbers
+                orderby num
+                select num;
+
+            Console.WriteLine($"Ascending");
+            foreach (int s in sortAscending)
+            {
+                Console.WriteLine(s);
+                
+            }
+            return true;
+
+
             throw new NotImplementedException();
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
+            int sum = 0;
+            foreach(int num in numbers)
+            {
+                if(num % 2 == 0)
+                {
+                    sum += num;
+                }
+            }
+            return sum;
             throw new NotImplementedException();
         }
 
